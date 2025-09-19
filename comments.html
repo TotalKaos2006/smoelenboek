@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Comments - Imran Derraz</title>
+  <link rel="stylesheet" href="style_imran.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <a href="info.html">Info</a>
+    <a href="overmij.html">Over mij</a>
+    <a href="contact.html">Contact</a>
+    <a href="comments.html">Comments</a>
+    <div class="language-switch">
+      <a href="comments.html"><button>NL</button></a>
+      <a href="comments-en.html"><button>EN</button></a>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <h1>Comments</h1>
+    <p>Laat hier je mening of feedback achter over mijn website!</p>
+
+    <div class="comment-section">
+      <h2>Laat een reactie achter</h2>
+      <form action="verwerk_comment.php" method="post">
+        <label for="naam">Naam:</label><br>
+        <input type="text" id="naam" name="naam" required><br><br>
+
+        <label for="reactie">Reactie:</label><br>
+        <textarea id="reactie" name="reactie" rows="5" cols="40" required></textarea><br><br>
+
+        <input type="submit" value="Verstuur">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

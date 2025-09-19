@@ -1,0 +1,145 @@
+# Query: 
+# ContextLines: 1
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Website Imran Derraz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #bbdefb);
+      color: #1a237e;
+    }
+
+    .language-switch {
+      text-align: center;
+      padding: 20px;
+      background-color: #e8eaf6;
+    }
+
+    button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: #1a237e;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #3949ab;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px;
+      gap: 40px;
+    }
+
+    .profile-img {
+      flex: 1;
+      max-width: 300px;
+    }
+
+    .profile-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .profile-info {
+      flex: 2;
+      max-width: 600px;
+    }
+
+    h1, h2 {
+      color: #0d47a1;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    #content-en, #content-nl {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="language-switch">
+    <button onclick="setLanguage('nl')">Nederlands</button>
+    <button onclick="setLanguage('en')">English</button>
+  </div>
+
+  <!-- Nederlandse inhoud -->
+  <div id="content-nl" class="container">
+    <div class="profile-img">
+      <img src="foto3.jpg" alt="Foto van Imran">
+    </div>
+    <div class="profile-info">
+      <h1>Info over mijzelf</h1>
+      <p>
+        Imran Derraz<br>
+        Geboren op 7 augustus 2008<br>
+        17 jaar<br>
+        Woonplaats: Roermond<br>
+        Gilde Opleidingen<br>
+        Hobby's: voetballen<br>
+        Ik speel bij Fermonia<br>
+        Voor verdere contact: <a href="mailto:imran.derraz@student.gildeopleidingen.nl">imran.derraz@student.gildeopleidingen.nl</a>
+      </p>
+      <h2>Over mij</h2>
+      <p>
+        Ik ben een enthousiaste en sportieve persoon met een grote passie voor voetbal. In mijn vrije tijd sta ik graag op het veld, waar ik teamwork, doorzettingsvermogen en plezier combineer. Daarnaast heb ik ook interesse in gamen en voetbal kijken, en ben ik altijd op zoek naar nieuwe uitdagingen om mezelf te blijven ontwikkelen.
+      </p>
+    </div>
+  </div>
+
+  <!-- Engelse inhoud -->
+  <div id="content-en" class="container">
+    <div class="profile-img">
+      <img src="foto3.jpg" alt="Photo of Imran">
+    </div>
+    <div class="profile-info">
+      <h1>About Me</h1>
+      <p>
+        Imran Derraz<br>
+        Born on August 7, 2008<br>
+        17 years old<br>
+        Lives in Roermond<br>
+        Gilde Opleidingen<br>
+        Hobbies: playing football<br>
+        I play for Fermonia<br>
+        For further contact: <a href="mailto:imran.derraz@student.gildeopleidingen.nl">imran.derraz@student.gildeopleidingen.nl</a>
+      </p>
+      <h2>Personal Pitch</h2>
+      <p>
+        I’m an enthusiastic and sporty person with a strong passion for football. In my free time, I love being on the field, where I combine teamwork, perseverance, and fun. I also enjoy gaming and watching football, and I’m always looking for new challenges to keep growing.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function setLanguage(lang) {
+      document.getElementById('content-nl').style.display = lang === 'nl' ? 'flex' : 'none';
+      document.getElementById('content-en').style.display = lang === 'en' ? 'flex' : 'none';
+    }
+
+    // Default language
+    setLanguage('nl');
+  </script>
+
+</body>
+</html>

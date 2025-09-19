@@ -1,0 +1,14 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $naam = htmlspecialchars($_POST["naam"]);
+  $reactie = htmlspecialchars($_POST["reactie"]);
+  $tijd = date("d-m-Y H:i");
+
+  $bestand = fopen("reacties.txt", "a");
+  fwrite($bestand, "[$tijd] $naam: $reactie\n");
+  fclose($bestand);
+
+  header("Location: " . $_SERVER["HTTP_REFERER"]);
+  exit;
+}
+?>
