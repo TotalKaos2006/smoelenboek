@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title title="Paginatitel">Profiel van Ahmad Azzam</title>
+
+  <style>
+    :root { --bg:#b0b0b0; --btn:#000; --btn-hover:#333; --text:#111; --card:#fff; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background-color: var(--bg); color: var(--text); text-align: center;
+    }
+    header, main { padding: 16px; }
+    .toolbar { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin: 16px 0; }
+    .btn {
+      margin: 0; padding: 10px 18px; font-size: 16px; cursor: pointer; border: none;
+      border-radius: 8px; background: var(--btn); color: #fff; transition: background .2s;
+    }
+    .btn:hover, .btn:focus-visible { background: var(--btn-hover); outline: none; }
+    .card {
+      max-width: 720px; margin: 0 auto; background: var(--card);
+      border-radius: 12px; padding: 20px; box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    }
+    figure { margin: 0; }
+    img { border-radius: 12px; }
+    ul { list-style: disc; text-align: left; display: inline-block; }
+    .sr-only {
+      position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0;
+    }
+    footer { margin: 24px 0; font-size: 14px; opacity:.85; }
+    a { color: inherit; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="toolbar" aria-label="Acties">
+      <button id="translate-btn" class="btn" type="button" accesskey="t" tabindex="0"
+              title="Schakel tussen Nederlands en Engels"
+              data-text-nl="Engelse versie" data-text-en="Nederlandse versie">
+        Engelse versie
+      </button>
+
+      <a id="home-btn" class="btn" href="index.htm" target="_self" rel="nofollow"
+         title="Ga naar de homepage">Homepage</a>
+
+      <button id="hobby-btn" class="btn" type="button" accesskey="h"
+              title="Toon of verberg hobby's"
+              data-text-nl="Toon mijn hobby's" data-text-en="Show my hobbies">
+        Toon mijn hobby's
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card" aria-labelledby="page-title">
+      <h1 id="page-title"
+          data-nl="Dat is Ahmad Azzam"
+          data-en="This is Ahmad Azzam"
+          title="Paginakop">
+        Dat is Ahmad Azzam
+      </h1>
+
+      <figure>
+        <img src="AhmadPhoto.jpg"
+             alt="Foto van Ahmad Azzam"
+             width="250" height="250"
+             loading="lazy" decoding="async"
+             draggable="false"
+             referrerpolicy="no-referrer"
+             title="Profielfoto">
+        <figcaption class="sr-only">Profielfoto van Ahmad Azzam</figcaption>
+      </figure>
+
+      <p id="dob"
+         data-nl="Geboortedatum: 26-01-2002"
+         data-en="Date of birth: 26-01-2002">
+        Geboortedatum: 26-01-2002
+      </p>
+
+      <p id="office"
+         data-nl="Kantoornummer: 21"
+         data-en="Office number: 21">
+        Kantoornummer: 21
+      </p>
+
+      <p id="email">
+        <span data-nl="E-mailadres: " data-en="Email address: ">E-mailadres: </span>
+        <a href="mailto:ahmad.azam1243@gmail.com" title="E-mail sturen">ahmad.azam1243@gmail.com</a>
+      </p>
+
+      <p id="phone">
+        <span data-nl="Telefoonnummer " data-en="Phone number: ">Telefoonnummer </span>
+        <a href="tel:+31614828791" title="Bel dit nummer">0614828791</a>
+      </p>
+
+      <p id="hobbies-line"
+         data-nl="Hobby's: Volleybal, trainen, basketbal, Gamen"
+         data-en="Hobbies: Volleyball, training, basketball, Gamen">
+        Hobby's: Volleybal, trainen, basketbal, Gamen
+      </p>
+
+      <p id="pets"
+         data-nl="Huisdieren: Kat"
+         data-en="Pets: Cat">
+        Huisdieren: Kat
+      </p>
+
+      <p id="bio"
+         data-nl="Ik ben Ahmad Azzam. Ik woon in Beegden. Ik heb een zus, maar ik woon hier alleen."
+         data-en="I am Ahmad Azzam. I live in Beegden. I have a sister, but I live here alone.">
+        Ik ben Ahmad Azzam. Ik woon in Beegden. Ik heb een zus, maar ik woon hier alleen.
+      </p>
+
+      <div id="hobby-list" hidden aria-live="polite" aria-expanded="false"
+           title="Mijn hobby's">
+        <ul>
+          <li data-nl="Volleybal" data-en="Volleyball">Volleybal</li>
+          <li data-nl="Trainen" data-en="Training">Trainen</li>
+          <li data-nl="Basketbal" data-en="Basketball">Basketbal</li>
+          <li data-nl="Gamen" data-en="Gaming">Gamen</li>
+        </ul>
+        <!-- YouTube video als hobby -->
+        <div style="margin-top:20px;">
+          <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/zF5Ddo9JdpY?si=XvEfWAkZTPeb6XXp"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <!--Extra Foto voor mijn Hobby-->
+        <div style="margin-top: 20px;">
+            <img src="https://getwallpapers.com/wallpaper/full/0/f/0/691926-gorgerous-udyr-wallpapers-1920x1080-for-iphone-5s.jpg"
+                alt="foto van Udyr"
+                width="560"
+                style="max-width: 100%;border-radius: 12px;box-shadow:0 4px 16px rgba(0,0,0,0.15);"
+                title="Favoriete wallpaper"
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://totalkaos2006.github.io/smoelenboek/"
+       target="_blank" rel="noopener noreferrer"
+       title="Lees meer over HTML-attributen">Wie: Team 10</a>
+  </footer>
+
+  <script>
+    let isEnglish = false;
+
+    function setTextByLang(el) {
+      if (!el) return;
+      const text = isEnglish ? el.getAttribute('data-en') : el.getAttribute('data-nl');
+      if (text !== null) el.textContent = text;
+    }
+
+    function toggleLanguage() {
+      document.documentElement.lang = isEnglish ? 'nl' : 'en';
+      const ids = ['page-title','dob','office','hobbies-line','pets','bio'];
+      ids.forEach(id => setTextByLang(document.getElementById(id)));
+
+      const emailLabel = document.querySelector('#email > span');
+      const phoneLabel = document.querySelector('#phone > span');
+      setTextByLang(emailLabel);
+      setTextByLang(phoneLabel);
+
+      document.querySelectorAll('#hobby-list li').forEach(li => setTextByLang(li));
+
+      const translateBtn = document.getElementById('translate-btn');
+      const hobbyBtn = document.getElementById('hobby-btn');
+      translateBtn.textContent = isEnglish ? translateBtn.getAttribute('data-text-nl')
+                                           : translateBtn.getAttribute('data-text-en');
+      hobbyBtn.textContent     = isEnglish ? hobbyBtn.getAttribute('data-text-nl')
+                                           : hobbyBtn.getAttribute('data-text-en');
+
+      const img = document.querySelector('img');
+      img.alt = isEnglish ? 'Photo of Ahmad Azzam' : 'Foto van Ahmad Azzam';
+      img.title = isEnglish ? 'Profile photo' : 'Profielfoto';
+
+      isEnglish = !isEnglish;
+    }
+
+    function toggleHobbies() {
+      const hobbyList = document.getElementById('hobby-list');
+      const hobbyBtn  = document.getElementById('hobby-btn');
+      const isHidden  = hobbyList.hasAttribute('hidden');
+
+      if (isHidden) {
+        hobbyList.removeAttribute('hidden');
+        hobbyList.setAttribute('aria-expanded','true');
+        hobbyBtn.textContent = isEnglish ? 'Hide my hobbies' : "Verberg mijn hobby's";
+      } else {
+        hobbyList.setAttribute('hidden','');
+        hobbyList.setAttribute('aria-expanded','false');
+        hobbyBtn.textContent = isEnglish ? 'Show my hobbies' : "Toon mijn hobby's";
+      }
+    }
+
+    document.getElementById('translate-btn').addEventListener('click', toggleLanguage);
+    document.getElementById('hobby-btn').addEventListener('click', toggleHobbies);
+  </script>
+</body>
+</html>
